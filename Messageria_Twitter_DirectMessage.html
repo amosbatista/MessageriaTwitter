@@ -1,0 +1,32 @@
+<html>
+	<head>
+		<script>
+			function mensagemAguarde(){
+				document.getElementById("lblMensagemAguarde").innerText = "Por favor, aguarde. Dependendo da quantidade de usuários, o processo pode levar um tempo.";
+			}
+		</script>
+	</head>
+	<body>
+	
+		<form action="http://localhost:3472/Messageria_EnviarDM.aspx" method="post">
+			<p class="title">
+				Serviço de mensagem direta para Twitter.
+			</p>
+			<p class="descricao">
+				Informe um usuário, ou uma lista de usuários, separados por vírgula (","), que serão os destinatários da mensagem.
+			</p>
+			<p>
+				<textarea rows="10" cols="10" name="userList"> </textarea><br>
+			</p>
+			<p  class="descricao">
+				Informe a mensagem.
+			</p>
+			<p>
+				<textarea rows="20" cols="20" name="message"> </textarea><br>
+			</p>
+			
+			<input type="submit" value="Submit" onclick="mensagemAguarde()">
+		</form>
+		<p id="lblMensagemAguarde"></p>
+	</body>
+</html>
